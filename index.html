@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tracer Connect · Gestión corporativa digital</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:#F6F4EF;color:#1B2635;font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#023067}
+a:hover{color:#0A3F80}
+:focus-visible{outline:2px solid #0FB3AF;outline-offset:3px}
+summary::-webkit-details-marker{display:none}
+details[open] .faq-plus{transform:rotate(45deg)}
+h1,h2,h3,p{margin:0}
+</style>
+</helmet>
+
+<!-- SECCIÓN 1 · ENCABEZADO -->
+<header data-screen-label="Encabezado" style="position:sticky;top:0;z-index:50;background:#023067;border-bottom:1px solid rgba(203,191,168,.25)">
+  <div style="max-width:1200px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px 28px;flex-wrap:nowrap">
+    <a href="#inicio" aria-label="Tracer Connect, inicio" style="display:flex;align-items:center;gap:12px;text-decoration:none;min-height:44px">
+      <img src="assets/tracer-logo-blanco.png" alt="TRACER" style="height:22px;width:auto;display:block"></img>
+      <span style="width:1px;height:24px;background:rgba(203,191,168,.6)"></span>
+      <span style="color:#CBBFA8;font-weight:500;letter-spacing:.32em;font-size:14px">CONNECT</span>
+    </a>
+    <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
+    <nav aria-label="Principal" style="display:flex;gap:4px;flex-wrap:wrap;flex:1 1 auto;justify-content:center">
+      <a href="#modulos" style="color:#fff;text-decoration:none;font-size:15px;padding:10px 12px;border-radius:6px;min-height:44px;display:inline-flex;align-items:center" style-hover="background:rgba(255,255,255,.08);color:#fff">Módulos</a>
+      <a href="#planes" style="color:#fff;text-decoration:none;font-size:15px;padding:10px 12px;border-radius:6px;min-height:44px;display:inline-flex;align-items:center" style-hover="background:rgba(255,255,255,.08);color:#fff">Planes</a>
+      <a href="#seguridad" style="color:#fff;text-decoration:none;font-size:15px;padding:10px 12px;border-radius:6px;min-height:44px;display:inline-flex;align-items:center" style-hover="background:rgba(255,255,255,.08);color:#fff">Seguridad</a>
+      <a href="#preguntas" style="color:#fff;text-decoration:none;font-size:15px;padding:10px 12px;border-radius:6px;min-height:44px;display:inline-flex;align-items:center" style-hover="background:rgba(255,255,255,.08);color:#fff">Preguntas</a>
+    </nav>
+    </sc-if>
+    <div style="display:flex;gap:10px;flex-wrap:nowrap;flex:none">
+      <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
+      <a href="https://tracer-connect.com" style="color:#fff;text-decoration:none;font-weight:600;font-size:15px;padding:0 18px;min-height:44px;display:inline-flex;align-items:center;border:1px solid rgba(255,255,255,.45);border-radius:8px" style-hover="background:rgba(255,255,255,.08);color:#fff">Entrar</a>
+      </sc-if>
+      <a href="https://calendar.app.google/CCgLNbLs7VfrhZqh8" target="_blank" rel="noopener" style="color:#023067;background:#0FB3AF;text-decoration:none;font-weight:600;font-size:15px;padding:0 16px;min-height:44px;display:inline-flex;align-items:center;border-radius:8px;white-space:nowrap" style-hover="background:#3CC6C2;color:#023067">{{ ctaLabel }}</a>
+    </div>
+  </div>
+</header>
+
+<!-- SECCIÓN 2 · HERO -->
+<section id="inicio" data-screen-label="Hero" style="position:relative;background:#023067;color:#fff;overflow:hidden">
+  <div style="position:absolute;inset:0;background:#023067">
+    <img src="assets/hero-angel-cdmx.png" alt="Ángel de la Independencia en Paseo de la Reforma, Ciudad de México, de noche" style="width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block;mix-blend-mode:luminosity;opacity:.9"></img>
+  </div>
+  <div style="position:absolute;inset:0;background:#023067;mix-blend-mode:multiply;opacity:.3;pointer-events:none"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(2,48,103,.9) 0%,rgba(2,48,103,.6) 50%,rgba(2,48,103,.15) 100%);pointer-events:none"></div>
+  <div style="position:relative;max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,112px) 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:48px;align-items:center;pointer-events:none">
+    <div style="display:flex;flex-direction:column;gap:24px;pointer-events:auto">
+      <p style="font-size:13px;font-weight:600;letter-spacing:.18em;color:#CBBFA8">GESTIÓN CORPORATIVA DIGITAL</p>
+      <h1 style="font-size:clamp(38px,5.4vw,64px);font-weight:300;line-height:1.08;letter-spacing:-.02em;text-wrap:balance">Su vida corporativa, <strong style="font-weight:700;background:linear-gradient(transparent 62%,rgba(15,179,175,.38) 62%);padding:0 .06em">en un solo lugar.</strong></h1>
+      <p style="font-size:clamp(17px,1.6vw,20px);color:#E4E9F0;max-width:520px;text-wrap:pretty">Sociedades, asambleas, libros de accionistas y firma electrónica, sin papeleo.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;padding-top:8px">
+        <a href="https://calendar.app.google/CCgLNbLs7VfrhZqh8" target="_blank" rel="noopener" style="color:#023067;background:#0FB3AF;text-decoration:none;font-weight:600;padding:0 26px;min-height:52px;display:inline-flex;align-items:center;border-radius:8px" style-hover="background:#3CC6C2;color:#023067">Agende su demostración</a>
+        <a href="#recorrido" style="white-space:nowrap;color:#fff;text-decoration:none;font-weight:600;padding:0 22px;min-height:52px;display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.5);border-radius:8px" style-hover="background:rgba(255,255,255,.1);color:#fff"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg>Ver el recorrido</a>
+      </div>
+      <p style="font-size:15px;color:#E4E9F0;display:flex;align-items:center;gap:10px;flex-wrap:wrap"><span>Desde <strong style="color:#fff;font-weight:700">$540 MXN al mes</strong></span><span aria-hidden="true" style="color:#6384A7">|</span><a href="https://buy.stripe.com/dR629c90HfRe8ow5kk" target="_blank" rel="noopener" style="color:#fff;font-weight:600;min-height:44px;display:inline-flex;align-items:center" style-hover="color:#0FB3AF">Contrate en línea →</a></p>
+    </div>
+    <figure id="recorrido" style="margin:0;display:flex;flex-direction:column;gap:12px;pointer-events:auto">
+      <div style="aspect-ratio:16/9;background:#011F45;border-radius:14px;overflow:hidden;border:1px solid rgba(203,191,168,.35);box-shadow:0 24px 60px rgba(0,0,0,.35)">
+        <video controls preload="metadata" playsinline aria-describedby="v1-desc" style="width:100%;height:100%;display:block;object-fit:cover"><source src="https://639193.fs1.hubspotusercontent-na1.net/hubfs/639193/TRACER%20CONNECT/Tracer_Connect_Presentacion_Plataforma.mp4" type="video/mp4"></source>Su navegador no puede reproducir este video.</video>
+      </div>
+      <figcaption id="v1-desc" style="font-size:14px;color:#E4E9F0"><strong style="color:#fff;font-weight:600">Presentación de la plataforma.</strong> Todo Tracer Connect en un recorrido rápido.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- FRANJA DE CONFIANZA -->
+<section aria-label="Garantías" style="background:#fff;border-bottom:1px solid #E4DFD4">
+  <div style="max-width:1200px;margin:0 auto;padding:22px 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:16px 28px">
+    <div style="display:flex;align-items:center;gap:12px;font-size:15px;font-weight:500;color:#023067"><svg style="flex:none" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0FB3AF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg>Sin instalar nada, en navegador y celular</div>
+    <div style="display:flex;align-items:center;gap:12px;font-size:15px;font-weight:500;color:#023067"><svg style="flex:none" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0FB3AF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg>Firma electrónica avanzada con MiFiel</div>
+    <div style="display:flex;align-items:center;gap:12px;font-size:15px;font-weight:500;color:#023067"><svg style="flex:none" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0FB3AF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>Conexión cifrada y acceso por sociedad</div>
+    <div style="display:flex;align-items:center;gap:12px;font-size:15px;font-weight:500;color:#023067"><svg style="flex:none" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0FB3AF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.99-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>Equipo de Tracer en CDMX y Torreón</div>
+  </div>
+</section>
+
+<!-- SECCIÓN 3 · EL PROBLEMA -->
+<section data-screen-label="El problema" style="padding:clamp(64px,8vw,104px) 24px">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:40px">
+    <div style="display:flex;flex-direction:column;gap:14px;max-width:720px">
+      <p style="font-size:13px;font-weight:600;letter-spacing:.18em;color:#023067">EL PROBLEMA</p>
+      <h2 style="font-size:clamp(30px,3.6vw,44px);font-weight:300;line-height:1.15;letter-spacing:-.015em;text-wrap:balance">La información de su sociedad, <strong style="font-weight:700;background:linear-gradient(transparent 62%,rgba(15,179,175,.38) 62%);padding:0 .06em">dispersa y a destiempo.</strong></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:20px">
+      <article style="background:#fff;border:1px solid #E4DFD4;border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:14px">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6384A7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M9 13h6M9 17h4"></path></svg>
+        <h3 style="font-size:19px;font-weight:600;color:#023067">Libros y actas dispersos</h3>
+        <p style="color:#3D4A5C;text-wrap:pretty">Libros y actas repartidos entre papel, carpetas y correos, sin una versión confiable a la mano.</p>
+      </article>
+      <article style="background:#fff;border:1px solid #E4DFD4;border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:14px">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6384A7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"></circle><path d="M12 9v4l2 2"></path><path d="M5 3 2 6M22 6l-3-3"></path></svg>
+        <h3 style="font-size:19px;font-weight:600;color:#023067">Poderes que vencen sin aviso</h3>
+        <p style="color:#3D4A5C;text-wrap:pretty">Se entera de que un poder venció justo cuando lo necesita para firmar.</p>
+      </article>
+      <article style="background:#fff;border:1px solid #E4DFD4;border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:14px">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6384A7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="m15 11-6 6M9 11l6 6"></path></svg>
+        <h3 style="font-size:19px;font-weight:600;color:#023067">Expedientes PLD/KYC incompletos</h3>
+        <p style="color:#3D4A5C;text-wrap:pretty">Ante una revisión, faltan documentos de la sociedad o de sus accionistas.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN 4 · MÓDULOS -->
+<section id="modulos" data-screen-label="Módulos" style="padding:clamp(64px,8vw,104px) 24px;background:#fff;border-top:1px solid #E4DFD4;border-bottom:1px solid #E4DFD4">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(56px,7vw,96px)">
+    <div style="display:flex;flex-direction:column;gap:14px;max-width:720px">
+      <p style="font-size:13px;font-weight:600;letter-spacing:.18em;color:#023067">MÓDULOS</p>
+      <h2 style="font-size:clamp(30px,3.6vw,44px);font-weight:300;line-height:1.15;letter-spacing:-.015em;text-wrap:balance">Todo lo que su sociedad necesita, <strong style="font-weight:700;background:linear-gradient(transparent 62%,rgba(15,179,175,.38) 62%);padding:0 .06em">conectado.</strong></h2>
+    </div>
+
+    <!-- Módulo · Libros -->
+    <div style="display:flex;flex-wrap:wrap;gap:40px 56px;align-items:center">
+      <figure style="margin:0;flex:1 1 420px;min-width:0">
+        <div style="aspect-ratio:16/9;background:#023067;border-radius:14px;overflow:hidden;border:1px solid #E4DFD4">
+          <video controls preload="metadata" playsinline aria-describedby="v2-desc" style="width:100%;height:100%;display:block;object-fit:cover"><source src="https://639193.fs1.hubspotusercontent-na1.net/hubfs/639193/TRACER%20CONNECT/Tracer_Connect_Libros_Corporativos.mp4" type="video/mp4"></source>Su navegador no puede reproducir este video.</video>
+        </div>
+      </figure>
+      <div style="flex:1 1 360px;display:flex;flex-direction:column;gap:16px">
+        <p style="font-size:13px;font-weight:600;letter-spacing:.14em;color:#6384A7">01</p>
+        <h3 style="font-size:clamp(24px,2.6vw,32px);font-weight:600;color:#023067;line-height:1.2">Libros corporativos electrónicos</h3>
+        <p id="v2-desc" style="color:#3D4A5C;font-size:18px;text-wrap:pretty">Actas, registro de acciones y variaciones de capital, digitales y al día, listos para consultar o descargar.</p>
+        <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px">
+          <li style="display:flex;gap:12px"><svg style="flex:none;margin-top:4px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0FB3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Registro de acciones y actas de asamblea.</li>
+          <li style="display:flex;gap:12px"><svg style="flex:none;margin-top:4px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0FB3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Variaciones de capital y sesiones del órgano de administración.</li>
+          <li style="display:flex;gap:12px"><svg style="flex:none;margin-top:4px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0FB3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Todos los libros disponibles en PDF.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Módulo · Poderes (video a la derecha) -->
+    <div style="display:flex;flex-wrap:wrap-reverse;flex-direction:row-reverse;gap:40px 56px;align-items:center">
+      <figure style="margin:0;flex:1 1 420px;min-width:0">
+        <div style="aspect-ratio:16/9;background:#023067;border-radius:14px;overflow:hidden;border:1px solid #E4DFD4">
+          <video controls preload="metadata" playsinline aria-describedby="v3-desc" style="width:100%;height:100%;display:block;object-fit:cover"><source src="https://639193.fs1.hubspotusercontent-na1.net/hubfs/639193/TRACER%20CONNECT/Tracer_Connect_Matriz_de_Poderes.mp4" type="video/mp4"></source>Su navegador no puede reproducir este video.</video>
+        </div>
+      </figure>
+      <div style="flex:1 1 360px;display:flex;flex-direction:column;gap:16px">
+        <p style="font-size:13px;font-weight:600;letter-spacing:.14em;color:#6384A7">02</p>
+        <h3 style="font-size:clamp(24px,2.6vw,32px);font-weight:600;color:#023067;line-height:1.2">Matriz de poderes</h3>
+        <p id="v3-desc" style="color:#3D4A5C;font-size:18px;text-wrap:pretty">Sepa en segundos quién tiene poderes, con qué facultades y cuándo vencen.</p>
+        <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px">
+          <li style="display:flex;gap:12px"><svg style="flex:none;margin-top:4px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0FB3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Registro con apoderado, notario, vigencia, facultades y documentos.</li>
+          <li style="display:flex;gap:12px"><svg style="flex:none;margin-top:4px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0FB3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Avisos de poderes vencidos y por vencer.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Módulo · KYC y PLD -->
+    <div style="display:flex;flex-wrap:wrap;gap:40px 56px;align-items:center">
+      <figure style="margin:0;flex:1 1 420px;min-width:0">
+        <div style="aspect-ratio:16/9;background:#023067;border-radius:14px;overflow:hidden;border:1px solid #E4DFD4">
+          <video controls preload="metadata" playsinline aria-describedby="v4-desc" style="width:100%;height:100%;display:block;object-fit:cover"><source src="https://639193.fs1.hubspotusercontent-na1.net/hubfs/639193/TRACER%20CONNECT/Tracer_Connect_Cumplimiento_KYC_PLD.mp4" type="video/mp4"></source>Su navegador no puede reproducir este video.</video>
+        </div>
+      </figure>
+      <div style="flex:1 1 360px;display:flex;flex-direction:column;gap:16px">
+        <p style="font-size:13px;font-weight:600;letter-spacing:.14em;color:#6384A7">03</p>
+        <h3 style="font-size:clamp(24px,2.6vw,32px);font-weight:600;color:#023067;line-height:1.2">Herramientas para KYC y PLD</h3>
+        <p id="v4-desc" style="color:#3D4A5C;font-size:18px;text-wrap:pretty">Vea el avance de cada expediente de sociedades y accionistas, y qué documentos faltan.</p>
+        <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px">
+          <li style="display:flex;gap:12px"><svg style="flex:none;margin-top:4px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0FB3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Documentos de la sociedad organizados por catálogo.</li>
+          <li style="display:flex;gap:12px"><svg style="flex:none;margin-top:4px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0FB3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Beneficiarios controladores de cada accionista.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Módulo · Firma (video a la derecha) -->
+    <div style="display:flex;flex-wrap:wrap-reverse;flex-direction:row-reverse;gap:40px 56px;align-items:center">
+      <figure style="margin:0;flex:1 1 420px;min-width:0">
+        <div style="aspect-ratio:16/9;background:#023067;border-radius:14px;overflow:hidden;border:1px solid #E4DFD4">
+          <video controls preload="metadata" playsinline aria-describedby="v5-desc" style="width:100%;height:100%;display:block;object-fit:cover"><source src="https://639193.fs1.hubspotusercontent-na1.net/hubfs/639193/TRACER%20CONNECT/Tracer_Connect_Firma_Electronica_Avanzada.mp4" type="video/mp4"></source>Su navegador no puede reproducir este video.</video>
+        </div>
+      </figure>
+      <div style="flex:1 1 360px;display:flex;flex-direction:column;gap:16px">
+        <p style="font-size:13px;font-weight:600;letter-spacing:.14em;color:#6384A7">04</p>
+        <h3 style="font-size:clamp(24px,2.6vw,32px);font-weight:600;color:#023067;line-height:1.2">Firma electrónica avanzada</h3>
+        <p id="v5-desc" style="color:#3D4A5C;font-size:18px;text-wrap:pretty">Envíe actas y contratos a firma y consulte su estatus, sin traslados ni papel.</p>
+        <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px">
+          <li style="display:flex;gap:12px"><svg style="flex:none;margin-top:4px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0FB3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Envío de libros, actas y contratos a firma con MiFiel.</li>
+          <li style="display:flex;gap:12px"><svg style="flex:none;margin-top:4px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0FB3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Archivo de firmas por sociedad con estatus pendiente, enviado o firmado.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Módulo · Skills en Claude (video HubSpot) -->
+    <div style="display:flex;flex-wrap:wrap;gap:40px 56px;align-items:center">
+      <figure style="margin:0;flex:1 1 420px;min-width:0;display:flex;flex-direction:column;gap:10px">
+        <div style="aspect-ratio:16/9;background:#023067;border-radius:14px;overflow:hidden;border:1px solid #E4DFD4">
+          <iframe src="https://639193.hs-sites.com/share/video/226362795165" title="Video: Skills de Tracer Connect en Claude" aria-describedby="v6-desc" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen="" style="width:100%;height:100%;border:0;display:block"></iframe>
+        </div>
+        <a href="https://639193.hs-sites.com/share/video/226362795165" target="_blank" rel="noopener" style="font-size:15px;font-weight:600;min-height:44px;display:inline-flex;align-items:center;gap:8px;align-self:flex-start">Ver video en pestaña nueva <span aria-hidden="true">→</span></a>
+      </figure>
+      <div style="flex:1 1 360px;display:flex;flex-direction:column;gap:16px">
+        <p style="font-size:13px;font-weight:600;letter-spacing:.14em;color:#6384A7">05</p>
+        <h3 style="font-size:clamp(24px,2.6vw,32px);font-weight:600;color:#023067;line-height:1.2">Skills en Claude</h3>
+        <p id="v6-desc" style="color:#3D4A5C;font-size:18px;text-wrap:pretty">Automatice la redacción y revisión de contratos con las Skills de Tracer Connect en Claude y ahorre horas de trabajo en cada documento.</p>
+        <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px">
+          <li style="display:flex;gap:12px"><svg style="flex:none;margin-top:4px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0FB3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Biblioteca de skills legales para redactar y revisar contratos con Claude.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Franja de funciones adicionales -->
+    <div style="background:#F6F4EF;border:1px solid #E4DFD4;border-radius:14px;padding:28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:24px">
+      <div style="display:flex;flex-direction:column;gap:6px"><p style="font-weight:600;color:#023067">Alta guiada</p><p style="font-size:15px;color:#3D4A5C">De S.A., S.A.S. y S.A.P.I., con borrador.</p></div>
+      <div style="display:flex;flex-direction:column;gap:6px"><p style="font-weight:600;color:#023067">Asambleas y aumentos de capital</p><p style="font-size:15px;color:#3D4A5C">Registre cada acto de su sociedad.</p></div>
+      <div style="display:flex;flex-direction:column;gap:6px"><p style="font-weight:600;color:#023067">Mi expediente</p><p style="font-size:15px;color:#3D4A5C">Sus documentos personales en un lugar.</p></div>
+      <div style="display:flex;flex-direction:column;gap:6px"><p style="font-weight:600;color:#023067">Sus pendientes</p><p style="font-size:15px;color:#3D4A5C">Visibles desde Inicio.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN 5 · TRACER CONNECT EN 60 SEGUNDOS (REELS) -->
+<sc-if value="{{ showReels }}" hint-placeholder-val="{{ true }}">
+<section data-screen-label="Reels" style="padding:clamp(64px,8vw,104px) 0">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;gap:32px">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap">
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <p style="font-size:13px;font-weight:600;letter-spacing:.18em;color:#023067">REELS</p>
+        <h2 style="font-size:clamp(30px,3.6vw,44px);font-weight:300;line-height:1.15;letter-spacing:-.015em">Tracer Connect <strong style="font-weight:700;background:linear-gradient(transparent 62%,rgba(15,179,175,.38) 62%);padding:0 .06em">en 60 segundos.</strong></h2>
+      </div>
+      <div style="display:flex;gap:10px">
+        <button type="button" onClick="{{ prev }}" aria-label="Reels anteriores" style="width:48px;height:48px;border-radius:50%;border:1px solid #C9D3DF;background:#fff;color:#023067;cursor:pointer;display:grid;place-items:center" style-hover="background:#EAF0F6"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg></button>
+        <button type="button" onClick="{{ next }}" aria-label="Reels siguientes" style="width:48px;height:48px;border-radius:50%;border:1px solid #C9D3DF;background:#fff;color:#023067;cursor:pointer;display:grid;place-items:center" style-hover="background:#EAF0F6"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></button>
+      </div>
+    </div>
+  </div>
+  <div ref="{{ reelRef }}" role="region" aria-label="Carrusel de reels" tabindex="0" style="display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px max(24px,calc((100vw - 1152px)/2)) 20px;scrollbar-width:thin;-webkit-overflow-scrolling:touch;margin-top:32px">
+    <sc-for list="{{ reels }}" as="reel" hint-placeholder-count="9">
+      <figure style="margin:0;flex:0 0 clamp(220px,24vw,260px);scroll-snap-align:start;display:flex;flex-direction:column;gap:12px">
+        <sc-if value="{{ reel.hasVideo }}" hint-placeholder-val="{{ false }}">
+        <div style="aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:#023067">
+          <video controls preload="metadata" playsinline poster="{{ reel.poster }}" aria-label="{{ reel.title }}" style="width:100%;height:100%;display:block;object-fit:cover"><source src="{{ reel.video }}" type="video/mp4"></source>Su navegador no puede reproducir este video.</video>
+        </div>
+        </sc-if>
+        <sc-if value="{{ reel.noVideo }}" hint-placeholder-val="{{ true }}">
+        <div style="aspect-ratio:9/16;border-radius:14px;border:1.5px dashed #6384A7;background:#EAF0F6;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;padding:20px;color:#023067">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#6384A7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg>
+          <p style="font-weight:700;letter-spacing:.08em;font-size:15px">{{ reel.id }}</p>
+          <p style="font-size:13px;color:#3D4A5C">Pendiente: insertar código de Instagram, TikTok o video MP4 (9:16)</p>
+        </div>
+        </sc-if>
+        <figcaption style="display:flex;flex-direction:column;gap:6px"><span style="align-self:flex-start;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#023067;background:#D8F2F1;padding:3px 10px;border-radius:999px">{{ reel.kind }}</span><span style="font-weight:600;color:#023067;font-size:16px">{{ reel.title }}</span></figcaption>
+      </figure>
+    </sc-for>
+  </div>
+  <div style="max-width:1200px;margin:0 auto;padding:16px 24px 0;display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+    <span style="font-weight:600;color:#023067">Síganos</span>
+    <div style="display:flex;gap:8px">
+      <a href="#" aria-label="Instagram (pendiente: enlace)" style="width:44px;height:44px;border-radius:50%;border:1px solid #C9D3DF;display:grid;place-items:center;color:#023067;background:#fff" style-hover="background:#EAF0F6"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><path d="M17.5 6.5h.01"></path></svg></a>
+      <a href="#" aria-label="TikTok (pendiente: enlace)" style="width:44px;height:44px;border-radius:50%;border:1px solid #C9D3DF;display:grid;place-items:center;color:#023067;background:#fff" style-hover="background:#EAF0F6"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"></path><path d="M14 3c.5 2.6 2.4 4.6 5 5"></path></svg></a>
+      <a href="#" aria-label="LinkedIn (pendiente: enlace)" style="width:44px;height:44px;border-radius:50%;border:1px solid #C9D3DF;display:grid;place-items:center;color:#023067;background:#fff" style-hover="background:#EAF0F6"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+      <a href="#" aria-label="YouTube (pendiente: enlace)" style="width:44px;height:44px;border-radius:50%;border:1px solid #C9D3DF;display:grid;place-items:center;color:#023067;background:#fff" style-hover="background:#EAF0F6"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 17a24 24 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.6 49.6 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24 24 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.6 49.6 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg></a>
+    </div>
+  </div>
+</section>
+</sc-if>
+
+<!-- SECCIÓN 6 · CÓMO FUNCIONA -->
+<section data-screen-label="Cómo funciona" style="padding:clamp(64px,8vw,104px) 24px;background:#fff;border-top:1px solid #E4DFD4;border-bottom:1px solid #E4DFD4">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:40px">
+    <div style="display:flex;flex-direction:column;gap:14px;max-width:760px">
+      <p style="font-size:13px;font-weight:600;letter-spacing:.18em;color:#023067">CÓMO FUNCIONA</p>
+      <h2 style="font-size:clamp(30px,3.6vw,44px);font-weight:300;line-height:1.15;letter-spacing:-.015em">Cinco pasos, <strong style="font-weight:700;background:linear-gradient(transparent 62%,rgba(15,179,175,.38) 62%);padding:0 .06em">una sola captura.</strong></h2>
+      <p style="font-size:18px;color:#3D4A5C;text-wrap:pretty">La información se captura una sola vez y alimenta los libros, los documentos y los avisos de su sociedad.</p>
+    </div>
+    <ol style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:16px">
+      <li style="border-top:2px solid #023067;padding-top:18px;display:flex;flex-direction:column;gap:8px"><span style="font-size:14px;font-weight:600;color:#6384A7">Paso 1</span><span style="font-size:22px;font-weight:600;color:#023067">Alta</span><span style="font-size:15px;color:#3D4A5C">Registre su S.A., S.A.S. o S.A.P.I. con el alta guiada.</span></li>
+      <li style="border-top:2px solid #023067;padding-top:18px;display:flex;flex-direction:column;gap:8px"><span style="font-size:14px;font-weight:600;color:#6384A7">Paso 2</span><span style="font-size:22px;font-weight:600;color:#023067">Actos</span><span style="font-size:15px;color:#3D4A5C">Capture asambleas, aumentos de capital y poderes.</span></li>
+      <li style="border-top:2px solid #023067;padding-top:18px;display:flex;flex-direction:column;gap:8px"><span style="font-size:14px;font-weight:600;color:#6384A7">Paso 3</span><span style="font-size:22px;font-weight:600;color:#023067">Libros</span><span style="font-size:15px;color:#3D4A5C">Los libros corporativos se actualizan con cada acto.</span></li>
+      <li style="border-top:2px solid #023067;padding-top:18px;display:flex;flex-direction:column;gap:8px"><span style="font-size:14px;font-weight:600;color:#6384A7">Paso 4</span><span style="font-size:22px;font-weight:600;color:#023067">Firma</span><span style="font-size:15px;color:#3D4A5C">Envíe actas y contratos a firma con MiFiel.</span></li>
+      <li style="border-top:2px solid #0FB3AF;padding-top:18px;display:flex;flex-direction:column;gap:8px"><span style="font-size:14px;font-weight:600;color:#6384A7">Paso 5</span><span style="font-size:22px;font-weight:600;color:#023067">Archivo</span><span style="font-size:15px;color:#3D4A5C">Consulte y descargue todo, ordenado por sociedad.</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- SECCIÓN 7 · SEGURIDAD -->
+<section id="seguridad" data-screen-label="Seguridad" style="padding:clamp(64px,8vw,104px) 24px">
+  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:48px;align-items:start">
+    <div style="display:flex;flex-direction:column;gap:18px">
+      <p style="font-size:13px;font-weight:600;letter-spacing:.18em;color:#023067">SEGURIDAD</p>
+      <h2 style="font-size:clamp(30px,3.6vw,44px);font-weight:300;line-height:1.15;letter-spacing:-.015em;text-wrap:balance">Su información, <strong style="font-weight:700;background:linear-gradient(transparent 62%,rgba(15,179,175,.38) 62%);padding:0 .06em">protegida en cada paso.</strong></h2>
+      <a href="https://tracer-connect.com/#/seguridad" target="_blank" rel="noopener" style="font-weight:600;min-height:44px;display:inline-flex;align-items:center;gap:8px;align-self:flex-start">Conozca cómo protegemos su información <span aria-hidden="true">→</span></a>
+    </div>
+    <ul style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:12px">
+      <li style="background:#fff;border:1px solid #E4DFD4;border-radius:12px;padding:18px;display:flex;gap:14px;align-items:flex-start"><svg style="flex:none" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0FB3AF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg><span style="font-size:15px">Acceso solo a las sociedades de cada cuenta, validado en el servidor.</span></li>
+      <li style="background:#fff;border:1px solid #E4DFD4;border-radius:12px;padding:18px;display:flex;gap:14px;align-items:flex-start"><svg style="flex:none" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0FB3AF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg><span style="font-size:15px">Contraseñas cifradas con BCrypt.</span></li>
+      <li style="background:#fff;border:1px solid #E4DFD4;border-radius:12px;padding:18px;display:flex;gap:14px;align-items:flex-start"><svg style="flex:none" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0FB3AF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg><span style="font-size:15px">Enlaces de recuperación de un solo uso que vencen en una hora.</span></li>
+      <li style="background:#fff;border:1px solid #E4DFD4;border-radius:12px;padding:18px;display:flex;gap:14px;align-items:flex-start"><svg style="flex:none" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0FB3AF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="m4.9 4.9 14.2 14.2"></path></svg><span style="font-size:15px">Intentos de acceso limitados.</span></li>
+      <li style="background:#fff;border:1px solid #E4DFD4;border-radius:12px;padding:18px;display:flex;gap:14px;align-items:flex-start"><svg style="flex:none" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0FB3AF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg><span style="font-size:15px">Sesiones con vencimiento.</span></li>
+      <li style="background:#fff;border:1px solid #E4DFD4;border-radius:12px;padding:18px;display:flex;gap:14px;align-items:flex-start"><svg style="flex:none" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0FB3AF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg><span style="font-size:15px">Avisos de firma verificados.</span></li>
+      <li style="background:#fff;border:1px solid #E4DFD4;border-radius:12px;padding:18px;display:flex;gap:14px;align-items:flex-start"><svg style="flex:none" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0FB3AF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path></svg><span style="font-size:15px">Documentos de hasta 20 MB, con descarga solo con permiso.</span></li>
+      <li style="background:#fff;border:1px solid #E4DFD4;border-radius:12px;padding:18px;display:flex;gap:14px;align-items:flex-start"><svg style="flex:none" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0FB3AF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg><span style="font-size:15px">Conexión cifrada por HTTPS.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- SECCIÓN 8 · PARA QUIÉN ES -->
+<section data-screen-label="Para quién es" style="padding:clamp(64px,8vw,104px) 24px;background:#fff;border-top:1px solid #E4DFD4;border-bottom:1px solid #E4DFD4">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:40px">
+    <div style="display:flex;flex-direction:column;gap:14px;max-width:720px">
+      <p style="font-size:13px;font-weight:600;letter-spacing:.18em;color:#023067">PARA QUIÉN ES</p>
+      <h2 style="font-size:clamp(30px,3.6vw,44px);font-weight:300;line-height:1.15;letter-spacing:-.015em">Hecha para quien <strong style="font-weight:700;background:linear-gradient(transparent 62%,rgba(15,179,175,.38) 62%);padding:0 .06em">administra sociedades.</strong></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:20px">
+      <article style="border:1px solid #E4DFD4;border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:12px;background:#F6F4EF"><h3 style="font-size:19px;font-weight:600;color:#023067">Despachos y abogados corporativos</h3><p style="font-size:15px;color:#3D4A5C;text-wrap:pretty">Libros, poderes y firmas de las sociedades de sus clientes en una sola plataforma.</p></article>
+      <article style="border:1px solid #E4DFD4;border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:12px;background:#F6F4EF"><h3 style="font-size:19px;font-weight:600;color:#023067">Notarías</h3><p style="font-size:15px;color:#3D4A5C;text-wrap:pretty">Consulte la estructura accionaria, las actas y los poderes de cada sociedad.</p></article>
+      <article style="border:1px solid #E4DFD4;border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:12px;background:#F6F4EF"><h3 style="font-size:19px;font-weight:600;color:#023067">Empresas con varias sociedades</h3><p style="font-size:15px;color:#3D4A5C;text-wrap:pretty">Empresarios, directores y contadores con la información corporativa de cada S.A., S.A.S. y S.A.P.I. al día.</p></article>
+      <article style="border:1px solid #E4DFD4;border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:12px;background:#F6F4EF"><h3 style="font-size:19px;font-weight:600;color:#023067">Empresas extranjeras</h3><p style="font-size:15px;color:#3D4A5C;text-wrap:pretty">Constituya su empresa en México y adminístrela desde el primer día.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN 9 · PLANES -->
+<section id="planes" data-screen-label="Planes" style="padding:clamp(64px,8vw,104px) 24px">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:40px">
+    <div style="display:flex;flex-direction:column;gap:14px;max-width:720px">
+      <p style="font-size:13px;font-weight:600;letter-spacing:.18em;color:#023067">PLANES</p>
+      <h2 style="font-size:clamp(30px,3.6vw,44px);font-weight:300;line-height:1.15;letter-spacing:-.015em">Elija cómo <strong style="font-weight:700;background:linear-gradient(transparent 62%,rgba(15,179,175,.38) 62%);padding:0 .06em">empezar.</strong></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:20px;align-items:stretch">
+      <article style="background:#023067;color:#fff;border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:20px;box-shadow:0 20px 48px rgba(2,48,103,.22)">
+        <span style="align-self:flex-start;background:#0FB3AF;color:#023067;font-size:12px;font-weight:700;letter-spacing:.1em;padding:5px 12px;border-radius:999px">PLAN</span>
+        <h3 style="font-size:24px;font-weight:600">Tracer Connect</h3>
+        <p style="display:flex;align-items:baseline;gap:8px"><span style="font-size:44px;font-weight:700;letter-spacing:-.02em">$540</span><span style="color:#E4E9F0">MXN al mes</span></p>
+        <p style="color:#E4E9F0;text-wrap:pretty">Cumpla con sus obligaciones legales anuales y firme con firma electrónica.</p>
+        <div style="border:1px dashed rgba(203,191,168,.7);border-radius:10px;padding:14px;font-size:14px;color:#CBBFA8">Pendiente: confirmar qué incluye el plan</div>
+        <div style="margin-top:auto;display:flex;flex-direction:column;gap:12px">
+          <a href="https://buy.stripe.com/dR629c90HfRe8ow5kk" target="_blank" rel="noopener" style="background:#0FB3AF;color:#023067;text-decoration:none;font-weight:600;min-height:52px;display:flex;align-items:center;justify-content:center;border-radius:8px" style-hover="background:#3CC6C2;color:#023067">Contratar</a>
+          <p style="font-size:13px;color:#C9D3DF;text-align:center">Pago seguro procesado por Stripe. Recibirá su acceso por correo.</p>
+        </div>
+      </article>
+      <article style="background:#fff;border:1px solid #E4DFD4;border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:20px">
+        <h3 style="font-size:24px;font-weight:600;color:#023067">Servicios corporativos a la carta</h3>
+        <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;font-size:15px">
+          <li style="display:flex;gap:10px"><svg style="flex:none;margin-top:3px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0FB3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Constitución de sociedades</li>
+          <li style="display:flex;gap:10px"><svg style="flex:none;margin-top:3px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0FB3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Transformación</li>
+          <li style="display:flex;gap:10px"><svg style="flex:none;margin-top:3px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0FB3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Entrada y salida de accionistas</li>
+          <li style="display:flex;gap:10px"><svg style="flex:none;margin-top:3px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0FB3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Disolución y liquidación</li>
+          <li style="display:flex;gap:10px"><svg style="flex:none;margin-top:3px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0FB3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Reforma de estatutos</li>
+          <li style="display:flex;gap:10px"><svg style="flex:none;margin-top:3px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0FB3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Registro de marca</li>
+        </ul>
+        <a href="#demostracion" style="margin-top:auto;border:1px solid #023067;color:#023067;text-decoration:none;font-weight:600;min-height:52px;display:flex;align-items:center;justify-content:center;border-radius:8px" style-hover="background:#EAF0F6;color:#023067">Solicite su cotización</a>
+      </article>
+      <article style="background:#fff;border:1px solid #E4DFD4;border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:20px">
+        <h3 style="font-size:24px;font-weight:600;color:#023067">¿Empresa extranjera?</h3>
+        <p style="color:#3D4A5C;text-wrap:pretty">Constituya su empresa en México con acompañamiento completo.</p>
+        <a href="#demostracion" style="margin-top:auto;border:1px solid #023067;color:#023067;text-decoration:none;font-weight:600;min-height:52px;display:flex;align-items:center;justify-content:center;border-radius:8px" style-hover="background:#EAF0F6;color:#023067">Hablemos</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN 10 · AGENDE SU DEMOSTRACIÓN -->
+<section id="demostracion" data-screen-label="Demostración" style="padding:0 24px clamp(64px,8vw,104px)">
+  <div style="max-width:1200px;margin:0 auto;background:#023067;color:#fff;border-radius:20px;padding:clamp(32px,5vw,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:40px;align-items:start">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <p style="font-size:13px;font-weight:600;letter-spacing:.18em;color:#CBBFA8">DEMOSTRACIÓN</p>
+      <h2 style="font-size:clamp(30px,3.6vw,44px);font-weight:300;line-height:1.15;letter-spacing:-.015em;text-wrap:balance">¿Quiere ver cómo se aplicaría <strong style="font-weight:700;background:linear-gradient(transparent 62%,rgba(15,179,175,.38) 62%);padding:0 .06em">a su práctica?</strong></h2>
+      <p style="font-size:18px;color:#E4E9F0;text-wrap:pretty">Le mostramos la plataforma con sus propios casos en una llamada de 20 minutos, sin compromiso.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;padding-top:8px">
+        <a href="https://calendar.app.google/CCgLNbLs7VfrhZqh8" target="_blank" rel="noopener" style="color:#023067;background:#0FB3AF;text-decoration:none;font-weight:600;padding:0 24px;min-height:52px;display:inline-flex;align-items:center;gap:10px;border-radius:8px" style-hover="background:#3CC6C2;color:#023067"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg>Agende su demostración</a>
+        <a href="https://wa.me/PENDIENTE" target="_blank" rel="noopener" aria-label="Escríbanos por WhatsApp (pendiente: número)" style="color:#fff;text-decoration:none;font-weight:600;padding:0 22px;min-height:52px;display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.5);border-radius:8px" style-hover="background:rgba(255,255,255,.1);color:#fff"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>Escríbanos por WhatsApp</a>
+      </div>
+      <p style="font-size:13px;color:#CBBFA8">Pendiente: número de WhatsApp.</p>
+    </div>
+    <sc-if value="{{ showCal }}" hint-placeholder-val="{{ true }}">
+      <div style="background:#fff;border-radius:14px;overflow:hidden;min-height:560px">
+        <iframe src="https://calendar.app.google/CCgLNbLs7VfrhZqh8" title="Calendario para agendar una demostración de Tracer Connect" loading="lazy" style="width:100%;height:600px;border:0;display:block"></iframe>
+      </div>
+    </sc-if>
+  </div>
+</section>
+
+<!-- SECCIÓN 11 · BROCHURE -->
+<section data-screen-label="Brochure" style="padding:0 24px clamp(64px,8vw,104px)">
+  <div style="max-width:1200px;margin:0 auto;background:#fff;border:1px solid #E4DFD4;border-radius:20px;padding:clamp(28px,4vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:40px;align-items:center">
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <p style="font-size:13px;font-weight:600;letter-spacing:.18em;color:#023067">BROCHURE TÉCNICO</p>
+      <h2 style="font-size:clamp(28px,3.2vw,40px);font-weight:300;line-height:1.15;letter-spacing:-.015em">Descargue el <strong style="font-weight:700;background:linear-gradient(transparent 62%,rgba(15,179,175,.38) 62%);padding:0 .06em">brochure técnico.</strong></h2>
+      <p style="font-size:18px;color:#3D4A5C;text-wrap:pretty">Conozca módulos, seguridad y arquitectura de la plataforma en 4 páginas.</p>
+    </div>
+    <form aria-label="Formulario de descarga del brochure" style="display:flex;flex-direction:column;gap:14px;border:1.5px dashed #6384A7;border-radius:14px;padding:24px;background:#F6F4EF">
+      <p style="font-size:13px;font-weight:600;color:#023067">Pendiente: insertar formulario de HubSpot</p>
+      <label style="display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:500">Nombre<input type="text" name="nombre" autocomplete="name" style="min-height:48px;border:1px solid #C9D3DF;border-radius:8px;padding:0 14px;font:inherit;font-size:16px;background:#fff"></input></label>
+      <label style="display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:500">Correo<input type="email" name="correo" autocomplete="email" style="min-height:48px;border:1px solid #C9D3DF;border-radius:8px;padding:0 14px;font:inherit;font-size:16px;background:#fff"></input></label>
+      <label style="display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:500">Empresa<input type="text" name="empresa" autocomplete="organization" style="min-height:48px;border:1px solid #C9D3DF;border-radius:8px;padding:0 14px;font:inherit;font-size:16px;background:#fff"></input></label>
+      <button type="button" style="margin-top:6px;background:#023067;color:#fff;border:0;font:inherit;font-weight:600;min-height:52px;border-radius:8px;cursor:pointer" style-hover="background:#0A3F80">Descargue el brochure</button>
+    </form>
+  </div>
+</section>
+
+<!-- SECCIÓN 12 · PREGUNTAS FRECUENTES -->
+<section id="preguntas" data-screen-label="Preguntas" style="padding:clamp(64px,8vw,104px) 24px;background:#fff;border-top:1px solid #E4DFD4">
+  <div style="max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:32px">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <p style="font-size:13px;font-weight:600;letter-spacing:.18em;color:#023067">PREGUNTAS FRECUENTES</p>
+      <h2 style="font-size:clamp(30px,3.6vw,44px);font-weight:300;line-height:1.15;letter-spacing:-.015em">Lo que suelen <strong style="font-weight:700;background:linear-gradient(transparent 62%,rgba(15,179,175,.38) 62%);padding:0 .06em">preguntarnos.</strong></h2>
+    </div>
+    <div style="display:flex;flex-direction:column;border-top:1px solid #E4DFD4">
+      <details style="border-bottom:1px solid #E4DFD4"><summary style="list-style:none;cursor:pointer;min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:600;font-size:18px;color:#023067;padding:12px 0">¿Necesito instalar algo?<span class="faq-plus" aria-hidden="true" style="font-size:26px;font-weight:300;transition:transform .2s">+</span></summary><p style="padding:0 0 22px;color:#3D4A5C">No. Tracer Connect funciona en el navegador y en el celular, sin instalar nada.</p></details>
+      <details style="border-bottom:1px solid #E4DFD4"><summary style="list-style:none;cursor:pointer;min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:600;font-size:18px;color:#023067;padding:12px 0">¿Puedo administrar varias sociedades?<span class="faq-plus" aria-hidden="true" style="font-size:26px;font-weight:300;transition:transform .2s">+</span></summary><p style="padding:0 0 22px;color:#3D4A5C">Sí. Puede administrar S.A., S.A.S. y S.A.P.I. desde la misma cuenta. <span style="color:#023067;font-weight:500">Pendiente: confirmar cuántas sociedades incluye el plan.</span></p></details>
+      <details style="border-bottom:1px solid #E4DFD4"><summary style="list-style:none;cursor:pointer;min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:600;font-size:18px;color:#023067;padding:12px 0">¿Cómo funciona la firma electrónica?<span class="faq-plus" aria-hidden="true" style="font-size:26px;font-weight:300;transition:transform .2s">+</span></summary><p style="padding:0 0 22px;color:#3D4A5C">Desde la plataforma envía libros, actas y contratos a firma con MiFiel y consulta si cada documento está pendiente, enviado o firmado.</p></details>
+      <details style="border-bottom:1px solid #E4DFD4"><summary style="list-style:none;cursor:pointer;min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:600;font-size:18px;color:#023067;padding:12px 0">¿Quién ve mi información?<span class="faq-plus" aria-hidden="true" style="font-size:26px;font-weight:300;transition:transform .2s">+</span></summary><p style="padding:0 0 22px;color:#3D4A5C">Cada cuenta accede solo a sus sociedades, y el acceso se valida en el servidor. Los documentos se descargan solo con permiso.</p></details>
+      <details style="border-bottom:1px solid #E4DFD4"><summary style="list-style:none;cursor:pointer;min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:600;font-size:18px;color:#023067;padding:12px 0">¿Cómo contrato?<span class="faq-plus" aria-hidden="true" style="font-size:26px;font-weight:300;transition:transform .2s">+</span></summary><p style="padding:0 0 22px;color:#3D4A5C">Haga clic en «Contratar» en la sección <a href="#planes">Planes</a> y complete su pago con Stripe. Si prefiere conocer la plataforma antes, <a href="https://calendar.app.google/CCgLNbLs7VfrhZqh8" target="_blank" rel="noopener">agende su demostración</a>.</p></details>
+      <details style="border-bottom:1px solid #E4DFD4"><summary style="list-style:none;cursor:pointer;min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:600;font-size:18px;color:#023067;padding:12px 0">¿Qué pasa después de pagar?<span class="faq-plus" aria-hidden="true" style="font-size:26px;font-weight:300;transition:transform .2s">+</span></summary><p style="padding:0 0 22px;color:#3D4A5C">Recibirá su acceso por correo en menos de 24 horas.</p></details>
+      <details style="border-bottom:1px solid #E4DFD4"><summary style="list-style:none;cursor:pointer;min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:600;font-size:18px;color:#023067;padding:12px 0">¿Puedo cancelar?<span class="faq-plus" aria-hidden="true" style="font-size:26px;font-weight:300;transition:transform .2s">+</span></summary><p style="padding:0 0 22px;color:#023067;font-weight:500">Pendiente: respuesta sobre cancelación.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN 13 · PIE DE PÁGINA -->
+<footer data-screen-label="Pie de página" style="background:#023067;color:#E4E9F0;padding:56px 24px 32px">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:40px">
+    <div style="display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div style="display:flex;align-items:center;gap:12px"><img src="assets/tracer-logo-blanco.png" alt="TRACER" style="height:22px;width:auto;display:block"></img><span style="width:1px;height:24px;background:rgba(203,191,168,.6)"></span><span style="color:#CBBFA8;font-weight:500;letter-spacing:.32em;font-size:14px">CONNECT</span></div>
+        <p style="font-size:15px">CDMX · Torreón</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:4px;font-size:15px">
+        <a href="mailto:contacto@tracer.mx" style="color:#fff;min-height:44px;display:inline-flex;align-items:center" style-hover="color:#CBBFA8">contacto@tracer.mx</a>
+        <a href="tel:8000010792" style="color:#fff;min-height:44px;display:inline-flex;align-items:center" style-hover="color:#CBBFA8">800 001 0792</a>
+      </div>
+      <div style="display:flex;gap:8px;align-items:flex-start">
+        <a href="#" aria-label="Instagram (pendiente: enlace)" style="width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.35);display:grid;place-items:center;color:#fff" style-hover="background:rgba(255,255,255,.1);color:#fff"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><path d="M17.5 6.5h.01"></path></svg></a>
+        <a href="#" aria-label="TikTok (pendiente: enlace)" style="width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.35);display:grid;place-items:center;color:#fff" style-hover="background:rgba(255,255,255,.1);color:#fff"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"></path><path d="M14 3c.5 2.6 2.4 4.6 5 5"></path></svg></a>
+        <a href="#" aria-label="LinkedIn (pendiente: enlace)" style="width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.35);display:grid;place-items:center;color:#fff" style-hover="background:rgba(255,255,255,.1);color:#fff"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+        <a href="#" aria-label="YouTube (pendiente: enlace)" style="width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.35);display:grid;place-items:center;color:#fff" style-hover="background:rgba(255,255,255,.1);color:#fff"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 17a24 24 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.6 49.6 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24 24 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.6 49.6 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg></a>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.15);padding-top:20px;display:flex;justify-content:space-between;gap:12px 24px;flex-wrap:wrap;font-size:14px">
+      <span>© 2026 Tracer México</span>
+      <nav aria-label="Legal" style="display:flex;gap:4px 20px;flex-wrap:wrap">
+        <a href="https://tracer-connect.com/#/aviso-de-privacidad" target="_blank" rel="noopener" style="color:#E4E9F0;min-height:44px;display:inline-flex;align-items:center" style-hover="color:#CBBFA8">Aviso de privacidad</a>
+        <a href="https://tracer-connect.com/#/terminos-y-condiciones" target="_blank" rel="noopener" style="color:#E4E9F0;min-height:44px;display:inline-flex;align-items:center" style-hover="color:#CBBFA8">Términos y condiciones</a>
+        <a href="https://tracer-connect.com/#/seguridad" target="_blank" rel="noopener" style="color:#E4E9F0;min-height:44px;display:inline-flex;align-items:center" style-hover="color:#CBBFA8">Seguridad</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;calendarioEmbebido&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Secciones&quot;},&quot;mostrarReels&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Secciones&quot;},&quot;tipoReels&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Todos&quot;,&quot;Venta&quot;,&quot;Producto&quot;],&quot;default&quot;:&quot;Todos&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Secciones&quot;},&quot;numeroReels&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:9,&quot;min&quot;:3,&quot;max&quot;:9,&quot;step&quot;:1,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Secciones&quot;}}">
+class Component extends DCLogic {
+  reelRef = React.createRef();
+  state = { w: typeof window !== 'undefined' ? window.innerWidth : 1200 };
+  onResize = () => this.setState({ w: window.innerWidth });
+  componentDidMount() { window.addEventListener('resize', this.onResize); this.onResize(); }
+  componentWillUnmount() { window.removeEventListener('resize', this.onResize); }
+  renderVals() {
+    const wide = this.state.w >= 1000;
+    const ctaLabel = this.state.w >= 520 ? 'Agende su demostración' : 'Agende demo';
+    const scroll = d => () => {
+      const el = this.reelRef.current;
+      if (el) el.scrollBy({ left: d * el.clientWidth * 0.8, behavior: 'smooth' });
+    };
+    // Videos de los reels: pegue la URL del MP4 (9:16) en "video".
+    // Opcional: "poster" con la URL de una imagen de portada.
+    // Los reels sin "video" no se muestran en el carrusel.
+    const all = [
+      { kind: 'Venta', title: '¿Sabe dónde están sus actas?', video: 'assets/reels/Reel_01_Donde_estan_sus_actas.mp4', poster: '' },
+      { kind: 'Venta', title: 'El poder que venció el día de la firma', video: 'assets/reels/Reel_02_El_poder_que_vencio.mp4', poster: '' },
+      { kind: 'Venta', title: 'Su sociedad al día por $540 al mes', video: 'assets/reels/Reel_03_Su_sociedad_al_dia_540.mp4', poster: '' },
+      { kind: 'Producto', title: 'Su sociedad en un vistazo', video: 'assets/reels/Reel_04_Su_sociedad_en_un_vistazo.mp4', poster: '' },
+      { kind: 'Producto', title: 'Libros al día', video: 'assets/reels/Reel_05_Libros_al_dia.mp4', poster: '' },
+      { kind: 'Producto', title: 'Poderes por vencer', video: 'assets/reels/Reel_06_Poderes_por_vencer.mp4', poster: '' },
+      { kind: 'Producto', title: 'Expediente KYC', video: 'assets/reels/Reel_07_Expediente_KYC.mp4', poster: '' },
+      { kind: 'Producto', title: 'Firma con MiFiel', video: 'assets/reels/Reel_08_Firma_con_MiFiel.mp4', poster: '' },
+      { kind: 'Producto', title: 'Skills en Claude', video: '', poster: '' }
+    ];
+    const mode = this.props.tipoReels ?? 'Todos';
+    const list = all.filter(r => r.video && (mode === 'Todos' || r.kind === mode));
+    const n = Math.min(list.length, Math.max(3, this.props.numeroReels ?? 9));
+    return {
+      wide, ctaLabel,
+      reelRef: this.reelRef,
+      prev: scroll(-1),
+      next: scroll(1),
+      reels: list.slice(0, n).map(r => ({ id: 'REEL_' + (all.indexOf(r) + 1), kind: r.kind, title: r.title, video: r.video, poster: r.poster || undefined, hasVideo: !!r.video, noVideo: !r.video })),
+      showReels: this.props.mostrarReels ?? true,
+      showCal: this.props.calendarioEmbebido ?? true
+    };
+  }
+}
+</script>
+</body>
+</html>
